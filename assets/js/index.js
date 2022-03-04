@@ -6,7 +6,6 @@ function getUserInfo() {
         method: "get",
         url: '/my/userinfo',
         success: function (res) {
-            console.log(res);
             // res.data
             if (res.status !== 0) {
                 return layer.msg('认证信息失败')
