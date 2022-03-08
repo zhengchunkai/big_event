@@ -78,7 +78,6 @@ function renderPage(total) {
 
     })
 }
-// 删除文章
 $('tbody').on('click', '.btn-delete', function () {
     var len = $('.btn-delete').length;
     var id = $(this).attr('data-id')
