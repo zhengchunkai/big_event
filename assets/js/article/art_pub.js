@@ -107,5 +107,6 @@ $.ajax({
             return layer.msg('获取文章分类失败')
         }
         form.val('form-pub1', res.data)
+        localStorage.removeItem('id')
     }
 })
