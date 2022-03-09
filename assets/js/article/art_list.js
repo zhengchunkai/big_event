@@ -78,6 +78,11 @@ function renderPage(total) {
 
     })
 }
+$('tbody').on('click', '.btn-Edit', function () {
+    location.href = '/article/art_pub.html'
+    var id = $(this).attr('data-Id')
+    localStorage.setItem('id',id)
+})
 $('tbody').on('click', '.btn-delete', function () {
     var len = $('.btn-delete').length;
     var id = $(this).attr('data-id')

@@ -92,7 +92,20 @@ function pubArticle(fd) {
                 return layer.msg('发布文章失败')
             }
             layer.msg('发布成功')
-            location.href="/article/art_list.html"
+            location.href = "/article/art_list.html"
         }
     })
 }
+console.log(localStorage.getItem('id'));
+var id = localStorage.getItem('id')
+$.ajax({
+    method: 'get',
+    url: '/my/article/' + id,
+    success: function (res) {
+        console.log(res);
+        if (res.status !== 0) {
+            return layer.msg('获取文章分类失败')
+        }
+        form.val('form-pub1', res.data)
+    }
+})
